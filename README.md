@@ -129,5 +129,3 @@ Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell. (
 
 Original Paper link: [(https://doi.org/10.1145/3442188.3445922)](https://dl.acm.org/doi/10.1145/3442188.3445922)
 
-
-
