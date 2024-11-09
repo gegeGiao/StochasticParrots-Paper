@@ -4,6 +4,9 @@ Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell
 ## Introduction
 The growth of **Large Language Models (LLMs)** has reshaped Natural Language Processing (NLP), with models like **BERT, GPT-2/3, and Switch-C** leading the way in performance but also raising new challenges. This paper critically examines the risks of these enormous models and poses essential questions: **How big is too big? What ethical, environmental, and social risks come with these advances?**
 
+![image](https://github.com/user-attachments/assets/6b1df15b-24fe-4038-ae0c-312a60391143)
+
+
 ### Problem and Motivation
 - The drive for bigger models is propelled by performance gains, but this paper urges the NLP community to consider **potentially harmful consequences**—from environmental damage to social harm.
 - It advocates for responsible research practices and the exploration of alternative, more sustainable approaches in NLP.
