@@ -103,17 +103,20 @@ The growth of **Large Language Models (LLMs)** has reshaped Natural Language Pro
 
 ## Resource Links
 
-1. [Original Paper](https://doi.org/10.1145/3442188.3445922)
-2. [Papers with Code: Environmental Impact of NLP](https://paperswithcode.com/sota/environmental-impact-of-nlp)
-3. [SustainNLP Workshop](https://sustain-nlp.org)
-4. [Value-Sensitive Design Framework](https://link-to-article-vsd)
-5. [Schwartz et al., Green AI](https://arxiv.org/abs/1907.10597)
+1. Related Paper: Towards Climate Awareness in NLP Research [[Original Paper](https://doi.org/10.1145/3442188.3445922)](https://arxiv.org/abs/2205.05071)
+2. Related Paper:Evaluating the Environmental Impact of Large Language Models: Sustainable Approaches and Practices. https://innovatesci-publishers.com/index.php/ICSJ/article/view/153
+3. [Papers with Code: Environmental Impact of NLP](https://paperswithcode.com/sota/environmental-impact-of-nlp)
+4. [SustainNLP Workshop](https://sustain-nlp.org)
+5. [Value-Sensitive Design Framework](https://link-to-article-vsd)
+6. [Schwartz et al., Green AI](https://arxiv.org/abs/1907.10597)
 
 ---
 
 ## Citation
 
-Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell. (2021). *On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?* Conference on Fairness, Accountability, and Transparency (FAccT ’21). DOI: [10.1145/3442188.3445922][(https://doi.org/10.1145/3442188.3445922)](https://dl.acm.org/doi/10.1145/3442188.3445922)
+Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell. (2021). *On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?* Conference on Fairness, Accountability, and Transparency (FAccT ’21). DOI: [10.1145/3442188.3445922]
+
+Original Paper link: [(https://doi.org/10.1145/3442188.3445922)](https://dl.acm.org/doi/10.1145/3442188.3445922)
 
 
 
