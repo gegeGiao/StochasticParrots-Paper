@@ -32,6 +32,7 @@ The growth of **Large Language Models (LLMs)** has reshaped Natural Language Pro
    - **Recommendations**:
      - **Data Curation and Documentation**: Collect smaller, curated datasets that are **representative and balanced**, reducing reliance on data from sources that overrepresent dominant perspectives.
      - **Inclusivity and Diversity**: Actively include voices from underrepresented communities, and ensure documentation captures dataset characteristics for transparency.
+   
 ![image](https://github.com/user-attachments/assets/23eaa546-bd32-4e3f-a0d0-8b25016fe372)
 
 ### 3. Limitations in Language Understanding
