@@ -108,7 +108,7 @@ The growth of **Large Language Models (LLMs)** has reshaped Natural Language Pro
    https://innovatesci-publishers.com/index.php/ICSJ/article/view/153
 4. [Papers with Code: Environmental Impact of NLP](https://paperswithcode.com/sota/environmental-impact-of-nlp)
 5. [SustainNLP Workshop](https://sustain-nlp.org)
-6. [Value-Sensitive Design Framework](https://link-to-article-vsd)
+6. Value-Sensitive Design Framework: An approach that integrates human values into the design process of technology. https://cseweb.ucsd.edu/~goguen/courses/271/friedman04.pdf 
 7. [Schwartz et al., Green AI](https://arxiv.org/abs/1907.10597)
 
 ---
