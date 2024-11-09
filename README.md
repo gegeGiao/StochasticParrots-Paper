@@ -27,6 +27,7 @@ To explore the properties of MSAs and how they behave different from CNNs, the a
   
 - Hybrid model AlterNet 
   
+![image](https://github.com/user-attachments/assets/81db995b-b752-4827-90f5-4aafd60f0dad)
 
 ## Approach
 
