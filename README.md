@@ -113,7 +113,7 @@ The growth of **Large Language Models (LLMs)** has reshaped Natural Language Pro
 
 ## Citation
 
-Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell. (2021). *On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?* Conference on Fairness, Accountability, and Transparency (FAccT ’21). DOI: [10.1145/3442188.3445922](https://doi.org/10.1145/3442188.3445922)
+Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell. (2021). *On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?* Conference on Fairness, Accountability, and Transparency (FAccT ’21). DOI: [10.1145/3442188.3445922][(https://doi.org/10.1145/3442188.3445922)](https://dl.acm.org/doi/10.1145/3442188.3445922)
 
 
 
