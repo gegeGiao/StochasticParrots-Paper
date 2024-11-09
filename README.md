@@ -1,4 +1,4 @@
-# How Do Vision Transformers Work? 
+# On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?
 Namuk Park, Songkuk Kim
 
 ## Introduction
