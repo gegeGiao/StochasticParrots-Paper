@@ -83,6 +83,8 @@ The growth of **Large Language Models (LLMs)** has reshaped Natural Language Pro
 - **Limitations in Bias Detection**: Current bias detection tools often miss subtle, culturally specific forms of bias, making it essential to prioritize culturally aware, context-sensitive approaches.
 - **Field Debates**: The authors challenge the common view that increased model size inherently equates to better understanding, arguing instead for ethical considerations and alternative metrics for success.
 
+![image](https://github.com/user-attachments/assets/74bd6261-4e1a-4ba0-94f2-000afba52c71)
+
 ---
 
 ## Impacts
