@@ -2,146 +2,118 @@
 Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell
 
 ## Introduction
+The growth of **Large Language Models (LLMs)** has reshaped Natural Language Processing (NLP), with models like **BERT, GPT-2/3, and Switch-C** leading the way in performance but also raising new challenges. This paper critically examines the risks of these enormous models and poses essential questions: **How big is too big? What ethical, environmental, and social risks come with these advances?**
 
-Multi-head self-attentions (MSAs) are a core component of computer vision, however little is known the nature of MSAs. Traditionally, Convolutional Neural Networks (CNNs) have dominated this field, but Vision Transformers with MSAs are outperforming them. This paper seeks to better understand MSAs and how they contribute to the success of Vision Transformers (ViTs) by exploring key architectural components and behavioral properties in comparision to CNNs. 
+### Problem and Motivation
+- The drive for bigger models is propelled by performance gains, but this paper urges the NLP community to consider **potentially harmful consequences**—from environmental damage to social harm.
+- It advocates for responsible research practices and the exploration of alternative, more sustainable approaches in NLP.
 
-**Problem and Motivation**
+### Key Research Questions
+1. What risks are associated with LLMs' scale, from environmental costs to social implications?
+2. How can the field of NLP benefit from smaller, more efficient, and ethically guided models?
 
-- Understand the properties of MSAs that allow them to perform well
-- Determine the accuracy of the widely held belief that the success of MSAs is due to their weak inductive bias and capture of long range dependencies.
+---
 
-**Research Questions**
+## Section Summaries
 
-- What properties of MSAs do we need to improve optimization?
-- Do MSAs act like CNNs?
-- How can we harmonize MSAs with CNNs?
-  
-**Approach Overview**
-  
-To explore the properties of MSAs and how they behave different from CNNs, the authors consider:
-- Loss landscape visualizations of ViTs and CNNs
-- MSA Frequency Behavior
-- Network Architecture
-  
-**Application**
-  
-- Hybrid model AlterNet 
-  
-![image](https://github.com/user-attachments/assets/81db995b-b752-4827-90f5-4aafd60f0dad)
+### 1. Environmental and Financial Costs
+   - **Problem**: Training large LLMs is resource-intensive, demanding substantial energy, which results in significant **carbon emissions**. For example, training a single large model can emit as much CO₂ as several transcontinental flights.
+   - **Impact**: These costs disproportionately affect marginalized communities, who experience the worst effects of climate change yet often lack access to the benefits of these models.
+   - **Recommendations**:
+     - **Energy Efficiency**: The authors call for the development of energy-efficient AI, shifting the focus from model size to **sustainability as a key metric**.
+     - **Benchmarking Emissions**: Include energy usage and environmental impact in model evaluations, and encourage training in carbon-friendly regions.
 
-## Approach
+### 2. Bias in Training Data
+   - **Problem**: Massive LLMs often rely on vast datasets scraped from the internet, containing uncurated data that amplifies **hegemonic viewpoints** and harmful stereotypes, especially those targeting marginalized groups.
+   - **Impact**: These biases manifest as discriminatory language or ideologies within model outputs, reinforcing harmful stereotypes and causing social harm.
+   - **Recommendations**:
+     - **Data Curation and Documentation**: Collect smaller, curated datasets that are **representative and balanced**, reducing reliance on data from sources that overrepresent dominant perspectives.
+     - **Inclusivity and Diversity**: Actively include voices from underrepresented communities, and ensure documentation captures dataset characteristics for transparency.
 
-1. **Lost Landscape Analysis**
+### 3. Limitations in Language Understanding
+   - **Problem**: LLMs are designed to predict text patterns, not understand meaning. They generate **fluent but shallow language output** that can be misinterpreted as human-like understanding.
+   - **Impact**: Users may over-rely on these models for complex tasks, mistaking probabilistic text generation for meaningful language comprehension, which can lead to **automation bias** and **misleading interpretations**.
+   - **Recommendations**:
+     - **Research on Genuine Language Understanding**: Redirect resources to approaches that advance **true comprehension** over simple language pattern recognition.
+     - **Public Awareness**: Educate users on the limits of LLMs to temper expectations and prevent over-reliance on misleading outputs.
 
-<img width="683" alt="Screenshot 2024-11-06 at 11 06 52 PM" src="https://github.com/user-attachments/assets/72ae93c6-ee29-490e-bdf9-2e9cc35c8072">
+### 4. Real-World Harms and Misinformation Risks
+   - **Problem**: LLMs can propagate biased or abusive language, reinforce existing prejudices, and even be exploited for disinformation by bad actors.
+   - **Impact**: The potential for LLMs to produce harmful, biased content carries risks to individuals and society, especially when deployed in sensitive applications or spread as misinformation.
+   - **Recommendations**:
+     - **Accountability in Model Use**: Design systems to track and moderate AI outputs, making it clear when text is generated by an LLM to maintain accountability.
+     - **Stakeholder Involvement**: Engage affected communities in the development process to anticipate harmful uses and build safeguards against misuse.
 
-This analysis demonstrates that MSAs consistently flatten the loss landscape for training. ViTs create a smoother, more trainable neural networks compared to ResNet (CNNs), demonstated by their more direct paths. Their weak inductive bias and long-range dependency produce negative Hessian eigenvalues in small data regimes, and these non-convex points disrupt NN training. Large datasets and loss landscape smoothing methods alleviate this problem.
+### 5. Ethical Research Frameworks and Alternative Paths
+   - **Problem**: The pursuit of larger models often overlooks potential ethical issues and narrows the focus to size and leaderboard performance as key metrics of success.
+   - **Impact**: This trend diverts research away from diverse, potentially less resource-intensive solutions, and fails to address the broader ethical concerns.
+   - **Recommendations**:
+     - **Value-Sensitive Design**: Incorporate frameworks like **value-sensitive design** and **stakeholder engagement** to guide model development and ensure alignment with social values.
+     - **Pre-mortem Analysis**: Use tools like pre-mortem analysis to evaluate potential harms and identify viable, safer alternatives before scaling up model size.
 
+---
 
-2. **MSA Behavior Analysis**
+## Architecture Overview: Understanding the Risks of LLM Design
 
-<img width="688" alt="Screenshot 2024-11-07 at 7 32 05 AM" src="https://github.com/user-attachments/assets/d7d0ab9e-abd1-44eb-a5ce-e45e87817b76">
+### LLM Architecture Description
+   - LLMs operate by **predicting sequences** of tokens (characters, words, or phrases) based on preceding or surrounding text, without genuine understanding.
+   - This architecture allows LLMs to simulate coherent text but also introduces risks, as they lack the capacity for contextual meaning or communicative intent.
 
-In this diagram, the behavior difference in how CNNs and ViTs process visual information is demonstrated through frequency analysis. The Fourier analysis shows that the CNN amplifies high-frequency features while ViT reduces them, effectively making them high-pass and low-pass filters respectively. The noise robustness test confirms these behaviors: ViT handles high-frequency noise better, while ResNet struggles with it. This emphasizes the complementary processing styles of CNNs and ViTs. 
+### Key Distinctions from Smaller, Curated Models
+   - **Data Size and Scope**: LLMs use massive datasets that are often uncurated, amplifying biases and lacking in documentation.
+   - **Scale-Based Performance vs. Comprehension**: While LLMs perform well on benchmarks, this scale-driven success often prioritizes form over meaning.
 
-**Question: How might you describe the role of ViTs as low pass filters in this context?**
+### Formal Pseudocode for the Model
+1. **Data Collection**: Scrape large web-based datasets → Apply minimal filtering.
+2. **Training Process**: Model learns to predict tokens based on probabilistic patterns in text.
+3. **Output Generation**: Generate sequences with coherent structure but without true understanding.
 
-
-Low pass filters of ViTs filters out high frequency information, making them better for focusing on the big picture of an image, focusing on broader, global patterns
-
-
-3. **Network Stage Analysis**
-
-<img width="618" alt="Screenshot 2024-11-06 at 11 11 03 PM" src="https://github.com/user-attachments/assets/7362020d-47f8-4a54-9abf-5b8793fbcdb9">
-
-This feature map variance analysis reveals: 
-
-MSA mechanisms consistently reduce the variance of feature map points, effectively acting as a stabilizing force in the network. In contrast, CNNs tend to increase variance, creating more diverse but potentially less stable representations. This variance accumulation occurs progressively through neural network layers, with a notable pattern emerging: the feature map variance reaches peak levels at the end of each stage in ResNet architectures. This pattern suggests that strategic placement of MSA blocks could help manage and utilize this variance effectively.
-
-
-<img width="684" alt="Screenshot 2024-11-07 at 7 33 35 AM" src="https://github.com/user-attachments/assets/da54ff59-dcda-4661-bceb-427befb2196d">
-
-Multi-Stage behavior
-
-Neural networks with multiple stages behave essentially like a series of smaller, connected models. Each stage develops its own specialized processing characteristics, rather than functioning as a uniform processing pipeline. This diagram reflects a shift in the model accuracy as one layer of a CNN or MSA is removed from their respective model. In ResNet, removing an early stage layers hurts accuracy more than removing a late stage layers. More importantly, removing a layer at the beginning of a stage impairs accuracy more than removing a layer at the end of a stage. In the ViT, removing an MSA bloack at the end stage seriously impairs the accuracy. This finding has significant implications for architecture design, as the performance impact of different components varies depending on their position within these stages. 
-  
-## Application: AlterNet Architecture 
-
-<img width="523" alt="Screenshot 2024-11-06 at 11 15 44 PM" src="https://github.com/user-attachments/assets/c5f389df-c709-4b06-9399-31464ef2811d">
-
-Comparison of three different repeating patterns 
-
-Based on the paper's insights about MSAs and CNNs exhibiting opposite behaviors, the researchers propose AlterNet, a model that leverages the complementary nature of these components. Since MSAs and Convs are low-pass and high-pass filters respectively, AlterNet strategically combines them by placing MSA blocks at the end of CNN stages. This design derives from the understanding that multi-stage neural networks behave like a series connection of small individual models, where components at stage endings play crucial roles in prediction.
-
-Additionally, the authors provide the following design rules: 
-- Alternately replace CNN blocks with MSA blocks from the end of a baseline CNN model.
-- If the added MSA block does not improve predictive performance, replace a CNN block located at the end of an earlier stage with an MSA block
--  Use more heads and higher hidden dimensions for MSA blocks in late stages.
-  
-**Question: What are some reasons why a hybrid model might benefit from placing MSA blocks at the end of the model?**
-
-- CNNs progressively increase feature map variance as information moves through the network, and by placing MSAs at stage ends, they can effectively manage the accumulated variance.
-- CNNs placed in earlier in stages extract detailed features and local patterns, whereas MSAs at stage ends aggregate these features. This ordering takes advantage of each component's strengths, where CNNs handle the initial detailed processing and MSAs smooth and integrate the processed information. This results in more refined and robust features.
-  
-
-<img width="574" alt="Screenshot 2024-11-07 at 7 20 36 AM" src="https://github.com/user-attachments/assets/4cc6bea4-0848-49ec-8878-133e26f01c7b">
-
-Detailed AlterNet architecture:
-1. Progressive Scaling: MSAs in stages 1 to 4 systematically increase in complexity with 3, 6, 12, and 24 heads respectively
-2. Strategic Placement: All stages except stage 1 end with MSA blocks
-3. Balanced Processing: Alternates between traditional CNN blocks and attention mechanisms
-4. Systematic Organization: Based on pre-activation ResNet-50 structure with strategic modifications
-
-<img width="631" alt="Screenshot 2024-11-07 at 7 46 25 AM" src="https://github.com/user-attachments/assets/7bcee0fc-cc00-4d05-8dce-cf44aac4c07f">
-
-Performance of AlterNet vs. CNNs and ViTs
-
-## Key Findings
-
-1. MSA's Impact on Accuracy and Generalization
-   
-The study reveals that Multi-head Self-Attention mechanisms improve neural network performance through two primary mechanisms. First, they consistently flatten loss landscapes, making the optimization process more stable and efficient. Second, they have better generalization capabilities. Importantly, these improvements stem primarily from the MSA's data-specific processing nature, rather than their ability to capture long-range dependencies as previously thought. This finding challenges the conventional ideas about why Vision Transformers work effectively.
-
-2. Complementary Behavior of MSAs and CNNs
-   
-One of the most significant discoveries is the complementary nature of MSAs and CNNs. MSAs function as low-pass filters, effectively smoothing and aggregating information across feature maps. In contrast, CNNs act as high-pass filters, emphasizing fine details and local patterns. This difference explains their varying robustness to noise: MSAs handle high-frequency noise effectively because they naturally filter it out, while CNNs struggle with such noise because they amplify it. This complementary relationship suggests that combining both approaches could lead to more robust architectures.
-
-3. Multi-stage Network Functionality
-   
-The research demonstrates that multi-stage neural networks operate as a series of interconnected smaller models, each with distinct characteristics and roles. MSAs positioned at the end of stages play particular roles in overall network performance. Each stage contributes uniquely to the network's processing pipeline, with early stages focusing on basic feature extraction and later stages handling more complex feature integration. This understanding led to the development of more effective architectural patterns for combining MSAs and CNNs.
-
+---
 
 ## Critical Analysis
 
-1. Data Scale Dependecies
-A limitation emerges in the context of data scale. Vision Transformers encounter challenges with non-convex losses when working with small datasets. This problem naturally diminishes with larger datasets, but it represents a significant constraint for applications with limited data availability. The researchers found that loss landscape smoothing methods can help mitigate this issue, but it remains an important consideration for practical applications.
+- **Overlooked Areas**: The authors highlight the lack of emphasis on **documentation and careful data curation**, suggesting that current practices ignore the long-term impacts of uncurated data.
+- **Limitations in Bias Detection**: Current bias detection tools often miss subtle, culturally specific forms of bias, making it essential to prioritize culturally aware, context-sensitive approaches.
+- **Field Debates**: The authors challenge the common view that increased model size inherently equates to better understanding, arguing instead for ethical considerations and alternative metrics for success.
 
-## Impacts 
+---
 
-**Theoretical Impacts**
+## Impacts
 
-This research fundamentally advances our understanding of how Vision Transformers work. By challenging the conventional wisdom about MSAs and demonstrating their complementary relationship with CNNs, the study opens new avenues for architectural innovation. The insights about loss landscape characteristics and the role of data specificity provide a stronger theoretical foundation for future development in computer vision architectures.
+### Theoretical Impacts
+- The paper reshapes the way we view LLMs, emphasizing that **scale alone is not the ultimate goal** in NLP. It calls for a shift in research priorities to include sustainability, ethics, and inclusive data practices.
 
-**Practical Impacts**
+### Practical Impacts
+- **Guidance for Model Development**: The paper’s recommendations, if implemented, could encourage **sustainable practices** in NLP research, making models more inclusive and accessible.
+- **Influence on Policy and Practice**: By prioritizing efficiency and ethical practices, this approach could guide companies and researchers to develop **socially responsible AI**.
 
-The findings translate directly into practical improvements for computer vision systems. The developed AlterNet architecture demonstrates superior performance in both small and large data regimes, offering a novel solution to implementing both CNNs and ViTs. The insights about stage-wise processing and the importance of MSA positioning provide clear guidelines for practitioners designing new architectures for specific applications.
+### Future Directions
+- **Green AI and Efficiency**: Emphasize **energy-efficient models** and evaluate models not only on accuracy but also on their environmental footprint.
+- **Improving Data Practices**: Curate datasets with representation in mind, ensuring that underrepresented voices are included and biases are mitigated.
+- **User Education and Awareness**: Educate users on LLM limitations to reduce overreliance on model outputs and curb automation bias.
 
-**Future Directions**
+---
 
-The complementary nature of MSAs and CNNs suggests potential for even more hybrid architectures. The understanding of stage-wise processing behaviors could lead to more efficient network designs. Additionally, the insights about loss landscape characteristics could inform the development of better training methods for AI models.
+## Questions for Audience
+
+1. **How can we implement data curation and documentation to mitigate bias and ensure diversity in LLMs?**
+2. **What are the benefits and trade-offs of prioritizing energy efficiency and ethical standards over model scale in NLP research?**
+
+---
+
+## Resource Links
+
+1. [Original Paper](https://doi.org/10.1145/3442188.3445922)
+2. [Papers with Code: Environmental Impact of NLP](https://paperswithcode.com/sota/environmental-impact-of-nlp)
+3. [SustainNLP Workshop](https://sustain-nlp.org)
+4. [Value-Sensitive Design Framework](https://link-to-article-vsd)
+5. [Schwartz et al., Green AI](https://arxiv.org/abs/1907.10597)
+
+---
 
 ## Citation
 
-Park, N., & Kim, S. (2022). How Do Vision Transformers Work? Published as a conference paper at ICLR 2022. arXiv:2202.06709.
+Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell. (2021). *On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?* Conference on Fairness, Accountability, and Transparency (FAccT ’21). DOI: [10.1145/3442188.3445922](https://doi.org/10.1145/3442188.3445922)
 
- Original Transformer Paper link: https://arxiv.org/abs/1706.03762
- 
-## Resource Links
-
-1. Paper Implementation: https://github.com/xxxnell/how-do-vits-work
-2. Slide Presentaion on paper: https://github.com/xxxnell/how-do-vits-work-storage/blob/master/resources/how_do_vits_work_poster_iclr2022.pdf
-3. Related Paper: "Blurs Behave Like Ensembles: Spatial Smoothings to Improve Accuracy, Uncertainty, and Robustness" https://arxiv.org/abs/2105.12639 
-4. Related paper: "On the Adversarial Robustness of Visual Transformers" https://arxiv.org/abs/2103.15670)
-5. Related paper: "Convolutional neural networks meet vision transformers" https://arxiv.org/abs/2107.06263 
 
 
