@@ -58,6 +58,8 @@ The growth of **Large Language Models (LLMs)** has reshaped Natural Language Pro
      - **Value-Sensitive Design**: Incorporate frameworks like **value-sensitive design** and **stakeholder engagement** to guide model development and ensure alignment with social values.
      - **Pre-mortem Analysis**: Use tools like pre-mortem analysis to evaluate potential harms and identify viable, safer alternatives before scaling up model size.
 
+![image](https://github.com/user-attachments/assets/065df2bd-7cdf-4dbf-9488-d1b25e8eb7c8)
+
 ---
 
 ## Architecture Overview: Understanding the Risks of LLM Design
