@@ -1,5 +1,5 @@
 # On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜
-Namuk Park, Songkuk Kim
+Emily M. Bender, Timnit Gebru, Angelina McMillan-Major, Shmargaret Shmitchell
 
 ## Introduction
 
