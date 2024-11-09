@@ -106,10 +106,9 @@ The growth of **Large Language Models (LLMs)** has reshaped Natural Language Pro
 1. Related Paper: Towards Climate Awareness in NLP Research [[Original Paper](https://doi.org/10.1145/3442188.3445922)](https://arxiv.org/abs/2205.05071)
 2. Related Paper: Evaluating the Environmental Impact of Large Language Models: Sustainable Approaches and Practices.
    https://innovatesci-publishers.com/index.php/ICSJ/article/view/153
-4. [Papers with Code: Environmental Impact of NLP](https://paperswithcode.com/sota/environmental-impact-of-nlp)
-5. [SustainNLP Workshop](https://sustain-nlp.org)
-6. Value-Sensitive Design Framework: An approach that integrates human values into the design process of technology. https://cseweb.ucsd.edu/~goguen/courses/271/friedman04.pdf 
-7. [Schwartz et al., Green AI](https://arxiv.org/abs/1907.10597)
+3. Value-Sensitive Design Framework: An approach that integrates human values into the design process of technology. https://cseweb.ucsd.edu/~goguen/courses/271/friedman04.pdf 
+4. Green AI (more energy-efficient AI research practices) [[Schwartz et al., Green AI](https://arxiv.org/abs/1907.10597)](https://arxiv.org/abs/1907.10597)
+5. Medium Post: Code Green: Addressing the Environmental Impact of Language Models https://medium.com/darrowai/code-green-addressing-the-environmental-impact-of-language-models-0161eb790c21
 
 ---
 
